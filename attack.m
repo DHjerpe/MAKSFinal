@@ -1,8 +1,7 @@
 function [ N, attacked_node ] = attack( N )
 %ATTACK: Random removal, simulation of erroneous failure
-degrees = zeros(1,length(N(:,1)));
 % get degrees
-parfor i = 1:length(N(:,1))
+for i = 1:length(N(:,1))
     degrees(i) = sum(N(i,:));
 end
 MAX_NODE = find(degrees == max(degrees));
